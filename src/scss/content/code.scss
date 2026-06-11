@@ -10,6 +10,16 @@
 	}
 }
 
+/* Code block typography: Commit Mono with ligatures */
+.HyperMD-codeblock,
+.cm-hmd-codeblock,
+pre,
+code,
+.markdown-preview-view code {
+	font-variant-ligatures: contextual;
+	font-size: 14px;
+}
+
 @media print {
 	.print {
 		--code-background: #eeeeee !important;

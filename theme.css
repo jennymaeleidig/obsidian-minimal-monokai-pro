@@ -44,6 +44,7 @@ SOFTWARE.
 body {
   --font-editor-theme:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Inter,Ubuntu,sans-serif;
   --font-editor:var(--font-editor-override), var(--font-text-override), var(--font-editor-theme);
+  --font-monospace: 'Commit Mono', monospace;
   /* Bases */
   --bases-table-column-border-width: 0px;
   --bases-header-border-width: 0;
@@ -1489,6 +1490,16 @@ body:not(.minimal-strike-lists) {
 }
 .minimal-code-scroll .cm-hmd-codeblock {
   white-space: pre !important;
+}
+
+/* Code block typography: Commit Mono with ligatures */
+.HyperMD-codeblock,
+.cm-hmd-codeblock,
+pre,
+code,
+.markdown-preview-view code {
+  font-variant-ligatures: contextual;
+  font-size: 14px;
 }
 
 @media print {
@@ -6218,6 +6229,61 @@ https://github.com/morhetz/gruvbox
 .theme-dark.minimal-macos-dark.minimal-dark-black {
   --divider-color:#1e1e1e;
   --tab-outline-color:#1e1e1e;
+}
+
+/*
+Monokai Pro
+Adapted for Obsidian Minimal Theme
+Color palette source: Monokai Pro VS Code theme (MonokaiPro.tmTheme)
+*/
+.theme-dark {
+  /* Base colors (8 accent colors for syntax highlighting) */
+  --color-red-rgb: 255,97,136;
+  --color-orange-rgb: 252,152,103;
+  --color-yellow-rgb: 255,216,102;
+  --color-green-rgb: 169,220,118;
+  --color-cyan-rgb: 120,220,232;
+  --color-blue-rgb: 120,220,232;
+  --color-purple-rgb: 171,157,242;
+  --color-pink-rgb: 171,157,242;
+  --color-red: #ff6188;
+  --color-orange: #fc9867;
+  --color-yellow: #ffd866;
+  --color-green: #a9dc76;
+  --color-cyan: #78dce8;
+  --color-blue: #78dce8;
+  --color-purple: #ab9df2;
+  --color-pink: #ab9df2;
+  /* HSL color space basis */
+  --base-h: 285;
+  --base-s: 5%;
+  --base-l: 17%;
+  --accent-h: 20;
+  --accent-s: 96%;
+  --accent-l: 70%;
+  /* Background tiers */
+  --bg1: #2d2a2e;
+  --bg2: #221f22;
+  --bg3: rgba(255, 255, 255, 0.06);
+  /* UI element borders */
+  --ui1: #403e41;
+  --ui2: #5b595c;
+  --ui3: #727072;
+  /* Text contrast tiers */
+  --tx1: #fcfcfa;
+  --tx2: #939293;
+  --tx3: #727072;
+  /* Accent color tiers (orange) */
+  --ax1: #fc9867;
+  --ax2: #ffb088;
+  --ax3: #e08850;
+  /* Highlight backgrounds */
+  --hl1: rgba(120, 220, 232, 0.15);
+  --hl2: rgba(252, 152, 103, 0.25);
+  /* Text on accent background */
+  --sp1: #221f22;
+  /* Monospace font */
+  --font-monospace: 'Commit Mono', monospace;
 }
 
 /*
